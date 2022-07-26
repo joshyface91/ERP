@@ -1,10 +1,14 @@
 @extends ('layout')
 
 @section ('content')
+<div id="login-error-message">
+      <p id="login-error">Invalid Username and/or Password</p>
+</div>
+
 <div id="login">    
     <form id="login_form">
         <div class="field_container">
-        <input type="text" placeholder="Email Address">
+        <input type="text" placeholder="Username">
         </div>
         
         <div class="field_container">

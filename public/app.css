@@ -4,10 +4,20 @@ button {
     border: 0;
     font-weight: normal;
     font-style: normal;
-    font-size: 100%;
+    font-size: 20px;
     line-height: 1;
-    font-family: inherit;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     float: center;
+    cursor: pointer;
+}
+#login-error {
+    display: inline-block;
+    background-color: #d1536c;
+    opacity: 0;
+}
+#login-error-message {
+    text-align: center;
+    font-size: 18px;
 }
 #login {
     border-color: #b4b2b2;
