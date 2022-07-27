@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
-class CustomAuthController extends Controller
+class AuthController extends Controller
 {
     public function login() {
         return view("auth.login");

@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardDirect;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +15,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
+/* login and registration routing */
+Route::get('/login', [AuthController::class, 'login']);
+Route::get('/registration', [AuthController::class, 'registration']);
+Route::post('/register-user', [AuthController::class, 'registerUser'])->name('register-user');
+Route::post('login-user', [AuthController::class, 'loginUser'])->name('login-user');
+Route::get('/dashboard', [AuthController::class, 'dashboard']);
+Route::get('/logout', [AuthController::class, 'logout']);
+
+/* dashboard routing */
+Route::get('/inventory-in', function(){
+    return view('inventory.inventory-in');
+});
+Route::get('/inventory-out', function(){
+    return view('inventory.inventory-out');
+});
+Route::get('/orders', function(){
+    return view('inventory.orders');
+});
+Route::get('/accounts-paid', function(){
+    return view('transactions.accounts-paid');
+});
+Route::get('/accounts-received', function(){
+    return view('transactions.accounts-received');
 });
 
-Route::get('/login', [CustomAuthController::class, 'login']);
-Route::get('/registration', [CustomAuthController::class, 'registration']);
-Route::post('/register-user', [CustomAuthController::class, 'registerUser'])->name('register-user');
-Route::post('login-user', [CustomAuthController::class, 'loginUser'])->name('login-user');
-Route::get('/dashboard', [CustomAuthController::class, 'dashboard']);
-Route::get('/logout', [CustomAuthController::class, 'logout']);
+/* inventory routing */
+
