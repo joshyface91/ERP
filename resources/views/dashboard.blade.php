@@ -14,7 +14,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-light sticky-top">
         <div class="container-fluid">
-            <a class="nav-item nav-link" href="#">Enterprise Logo</a>
+            <a class="nav-item nav-link" href="/dashboard">Enterprise Logo</a>
 
             <a href="#" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-menu"><i class="navbar-toggler-icon"></i></a>
             <div class="navbar-collapse collapse" id="navbar-menu">
@@ -47,7 +47,7 @@
                         <td>{{$data->username}}</td>
                     </tr>
                     <tr>
-                        <td><a href="logout">Logout</a></td>
+                        <td><a class="nav-item nav-link" href="logout">Logout</a></td>
                     </tr>
                 </tbody>
             </table>

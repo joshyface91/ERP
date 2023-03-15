@@ -44,7 +44,7 @@
                     </button>
                     <br>
                     <br>
-                        <a href="registration">Sign Up Here</a>
+                        <a class="nav-item nav-link" href="registration">Sign Up Here</a>
                 </form>
             </div>
         </div>
