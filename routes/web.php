@@ -26,7 +26,7 @@ Route::get('/logout', [AuthController::class, 'logout']);
 /* dashboard routing */
 Route::get('/inventory-in', function(){
     return view('inventory.inventory-in');
-});
+})->name('submit-inventory');
 Route::get('/inventory-out', function(){
     return view('inventory.inventory-out');
 });
@@ -41,4 +41,4 @@ Route::get('/accounts-received', function(){
 });
 
 /* inventory routing */
-
+Route::post('/inventory-in', [DashboardDirect::class, 'store']);

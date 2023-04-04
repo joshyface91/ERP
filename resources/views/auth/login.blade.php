@@ -23,7 +23,7 @@
                 @endif
                     @csrf
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="Username">Please Sign In</label>
                         <input type="text" class="form-control" placeholder="Username" name="username" value="{{old('username')}}">
                         <span class="text-danger">@error('username') {{$message}} @enderror</span>
                     </div>
