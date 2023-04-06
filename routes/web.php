@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardDirect;
+use App\Http\Controllers\InventoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,4 +41,5 @@ Route::get('/accounts-received', function(){
 });
 
 /* inventory routing */
-Route::post('/inventory-in', [DashboardDirect::class, 'store']);
+Route::post('/inventory-in', [InventoryController::class, 'store']);
+Route::post('/inventory-out', [InventoryController::class, 'use']);

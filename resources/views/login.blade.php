@@ -6,7 +6,7 @@
 </div>
 
 <div id="login">    
-    <form id="login_form">
+    <form id="login_form" autocomplete="on">
         <div class="field_container">
         <input type="text" placeholder="Username">
         </div>
